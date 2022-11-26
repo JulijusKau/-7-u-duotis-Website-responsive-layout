@@ -10,6 +10,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* PRITAIKYTA MOBILE S 320 PX */
+
 /* ================================
 HEADER
 ================================ */
@@ -46,13 +48,13 @@ ABOUT
 ================================ */
 
 #section-about {
-  height: 600px;
+  height: 800px;
   background-color: var(--background-color-secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: 10%;
+  row-gap: 5%;
 }
 
 #section-about p,
@@ -95,9 +97,13 @@ PROJECTS
   border-radius: 5% 5% 0 0;
 }
 
-.project-div h2 {
+.project-div a {
   color: white;
+  font-size: 1.8em;
   text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
   margin: 5% 0;
 }
 
@@ -162,13 +168,15 @@ footer {
 
 footer a {
   text-decoration: none;
+  background-color: var(--background-color-secondary);
   color: white;
-  font-size: 1.5em;
-  padding: 5px;
-  border: 3px solid white;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 footer span {
   color: white;
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
