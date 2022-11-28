@@ -10,6 +10,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* PRITAIKYTA MOBILE S 320 PX */
 
 /* ================================
@@ -19,6 +23,7 @@ HEADER
 .header {
   top: 0;
   position: sticky;
+  z-index: 100;
 }
 
 .topnav {
@@ -42,6 +47,11 @@ HEADER
   text-decoration: none;
   font-size: 17px;
   display: block;
+  transition: color 1s ease;
+}
+
+.topnav a:hover {
+  color: rgb(0, 255, 179);
 }
 
 .topnav a.icon {
@@ -111,6 +121,19 @@ PROJECTS
 .project-div img {
   width: 100%;
   border-radius: 5% 5% 0 0;
+  opacity: 0.5;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.project-div img:hover {
+  animation: opacity 2s forwards;
 }
 
 .project-div a {
@@ -182,6 +205,24 @@ footer {
   background-color: var(--background-color-main);
 }
 
+@keyframes button {
+  0% {
+    background-color: var(--background-color-main);
+  }
+  25% {
+    background-color: var(--background-color-secondary);
+  }
+  50% {
+    background-color: rgb(94, 94, 184);
+  }
+  75% {
+    background-color: rgb(12, 12, 88);
+  }
+  100% {
+    background-color: rgb(62, 62, 197);
+  }
+}
+
 footer a {
   text-decoration: none;
   background-color: var(--background-color-secondary);
@@ -191,6 +232,7 @@ footer a {
   text-align: center;
   font-weight: bold;
   border-radius: 30px;
+  animation: button 6s infinite;
 }
 
 footer span {
