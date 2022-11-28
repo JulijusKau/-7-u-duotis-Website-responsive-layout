@@ -16,34 +16,11 @@
 HEADER
 ================================ */
 
-/* header {
-  height: 50px;
-  padding: 3% 5%;
+.header {
   top: 0;
   position: sticky;
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--background-color-main);
 }
 
-header img {
-  max-height: 100%;
-  padding: 10px 0;
-}
-
-#header-menu {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
-}
-
-#header-menu a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.3em;
-} */
-
-/* Style the navigation menu */
 .topnav {
   overflow: hidden;
   background-color: var(--background-color-main);
@@ -51,12 +28,14 @@ header img {
   padding: 0 5%;
 }
 
-/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav img {
+  height: 28px;
+}
+
 .topnav #myLinks {
   display: none;
 }
 
-/* Style navigation menu links */
 .topnav a {
   color: white;
   padding: 14px 16px;
@@ -65,22 +44,14 @@ header img {
   display: block;
 }
 
-/* Style the hamburger menu */
 .topnav a.icon {
   background: var(--background-color-main);
   display: block;
   position: absolute;
   right: 0;
-  top: 0;
+  top: 7px;
 }
 
-/* Add a grey background color on mouse-over */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the active link (or home/logo) */
 .active {
   background-color: var(--background-color-main);
   color: white;
@@ -91,7 +62,8 @@ ABOUT
 ================================ */
 
 #section-about {
-  height: 700px;
+  height: fit-content;
+  padding: 5% 0;
   background-color: var(--background-color-secondary);
   display: flex;
   flex-direction: column;
@@ -102,6 +74,7 @@ ABOUT
 
 #section-about p,
 #section-about h1 {
+  padding: 5% 0;
   width: var(--width-main);
 }
 
@@ -199,7 +172,7 @@ FOOTER
 ================================ */
 
 footer {
-  height: 38px;
+  height: 50px;
   padding: 5px 5%;
   bottom: 0;
   position: sticky;
