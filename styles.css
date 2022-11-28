@@ -14,12 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
-/* PRITAIKYTA MOBILE S 320 PX */
+/* FOR MOBILE S FROM 320 PX */
 
 /* ================================
 HEADER
 ================================ */
-
 .header {
   top: 0;
   position: sticky;
@@ -38,6 +37,10 @@ HEADER
 }
 
 .topnav #myLinks {
+  display: none;
+}
+
+.topnav #myLinks2 {
   display: none;
 }
 
@@ -116,6 +119,7 @@ PROJECTS
   background-color: var(--background-color-secondary);
   width: var(--width-main);
   border-radius: 5%;
+  height: auto;
 }
 
 .project-div img {
@@ -144,6 +148,11 @@ PROJECTS
   display: flex;
   justify-content: center;
   margin: 5% 0;
+  transition: color 1s ease;
+}
+
+.project-div a:hover {
+  color: rgb(0, 255, 179);
 }
 
 /* ================================
@@ -238,4 +247,93 @@ footer a {
 footer span {
   color: white;
   font-size: 1.1em;
+}
+
+/* ================================
+FROM 672px FOR TABLETS 
+================================ */
+@media only screen and (min-width: 672px) {
+  .topnav img {
+    height: 48px;
+  }
+
+  .topnav a {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
+  .project-div a {
+    font-size: 2.5em;
+  }
+
+  footer {
+    height: 73.2px;
+  }
+  footer span {
+    font-size: 1.8em;
+  }
+
+  footer a {
+    font-size: 25px;
+    padding: 15px;
+    font-weight: bold;
+  }
+}
+
+/* ================================
+FROM 1024px FOR LAPTOPS AND SO FORTH
+================================ */
+
+@media only screen and (min-width: 1024px) {
+  .topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .topnav img {
+    height: 48px;
+  }
+
+  .topnav a.icon {
+    display: none;
+  }
+
+  .topnav #myLinks2 {
+    display: inline-flex;
+  }
+
+  #section-about {
+    padding: 0;
+  }
+
+  #section-about h1,
+  #section-about p {
+    padding: 6% 0 3% 0;
+  }
+
+  #section-projects {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content;
+    padding: 6% 10% 10% 10%;
+    gap: 5%;
+  }
+
+  .project-div {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #section-contact {
+    padding: 100px 0;
+  }
 }
